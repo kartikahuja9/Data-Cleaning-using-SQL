@@ -1,3 +1,9 @@
+/*
+Data Cleaning using SQL
+NashvilleHousing Dataset Obtained from Kaggle
+Environment:- Microsoft SQL Server
+*/
+
 --------------------------------------------------------------------------------------------------------
 --Data Cleaning in SQL
 
@@ -136,11 +142,11 @@ WITH RowNumCTE AS(
 SELECT *,
 	ROW_NUMBER() OVER (
 	PARTITION BY ParcelID,
-				 PropertyAddress,
-                 SalePrice,
-                 SaleDate,
-				 LegalReference
-				 ORDER BY
+		     PropertyAddress,
+                     SalePrice,
+                     SaleDate,
+		     LegalReference
+	ORDER BY
                     UniqueID
                     )row_num
 
@@ -155,11 +161,11 @@ WITH RowNumCTE AS(
 SELECT *,
 	ROW_NUMBER() OVER (
 	PARTITION BY ParcelID,
-				 PropertyAddress,
-                 SalePrice,
-                 SaleDate,
-				 LegalReference
-				 ORDER BY
+		     PropertyAddress,
+                     SalePrice,
+                     SaleDate,
+		     LegalReference
+	 ORDER BY
                     UniqueID
                     )row_num
 
